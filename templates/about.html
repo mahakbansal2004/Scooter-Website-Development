@@ -1,0 +1,257 @@
+{% extends 'base.html' %}
+
+{% block title %}
+about
+{% endblock title %}
+
+
+
+{% block body %}
+
+<body style="font-family: 'Arial', sans-serif; background-color: #f8f9fa;">
+
+<br id="top"><br>
+
+    <header class="bg-dark text-white text-center py-5">
+    <h1>Welcome to Skooty Display</h1>
+    <p class="lead">Your Journey, Your Style!</p>
+</header>
+
+<div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active" data-interval="5000">
+            <img src="static\about1.png" class="card-img-top" alt="TVS Scooter Image" height="400" width="400">
+        </div>
+        <div class="carousel-item" data-interval="5000">
+            <img src="static\about2.png" class="card-img-top" alt="TVS Scooter Image" height="400" width="400">
+        </div>
+        <div class="carousel-item" data-interval="5000">
+            <img src="static\about3.png" class="card-img-top" alt="TVS Scooter Image" height="400" width="400">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-target="#carouselExampleInterval" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-target="#carouselExampleInterval" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </button>
+</div>
+
+
+
+ <!-- Services and Benefits Section -->
+ <section class="container py-5">
+    <h2 class="text-center mb-4">Our Services and Benefits</h2>
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="card text-center">
+                <div class="card-body">
+                    <i class="fas fa-cogs fa-3x mb-3"></i>
+                    <h3 class="card-title">Customized Skooties</h3>
+                    <p class="card-text">Tailor your skooty to match your style and preferences. Choose from a variety of colors, features, and accessories.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="card text-center">
+                <div class="card-body">
+                    <i class="fas fa-hand-holding-heart fa-3x mb-3"></i>
+                    <h3 class="card-title">Customer-Centric Approach</h3>
+                    <p class="card-text">Our dedicated team ensures a seamless experience from purchase to maintenance. Your satisfaction is our top priority.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="card text-center">
+                <div class="card-body">
+                    <i class="fas fa-gift fa-3x mb-3"></i>
+                    <h3 class="card-title">Exclusive Benefits</h3>
+                    <p class="card-text">Enjoy exclusive perks, discounts, and offers as a valued member of the Skooty Display community. Your journey comes with extra rewards!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="container mt-5">
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="feature-box text-center" style="background-color: #ffffff; border-radius: 10px; padding: 30px; margin-bottom: 20px; box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);">
+                <i class="fas fa-motorcycle" style="font-size: 2em; margin-bottom: 10px;"></i>
+                <h3>Wide Selection</h3>
+                <p>Choose from a wide range of stylish and high-performance skooties.</p>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="feature-box text-center" style="background-color: #ffffff; border-radius: 10px; padding: 30px; margin-bottom: 20px; box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);">
+                <i class="fas fa-map-marked-alt" style="font-size: 2em; margin-bottom: 10px;"></i>
+                <h3>Convenient Locations</h3>
+                <p>Our showrooms are strategically located for your convenience.</p>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="feature-box text-center" style="background-color: #ffffff; border-radius: 10px; padding: 30px; margin-bottom: 20px; box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);">
+                <i class="fas fa-helmet" style="font-size: 2em; margin-bottom: 10px;"></i>
+                <h3>Safety First</h3>
+                <p>Your safety is our priority. All skooties come with advanced safety features.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Mission and Values Section -->
+<section class="container py-5">
+    <div class="row">
+        <div class="col-lg-6">
+            <h2>Mission</h2>
+            <p>Our mission is to provide high-quality and stylish skooties that enhance your commuting experience while promoting environmental sustainability.</p>
+        </div>
+        <div class="col-lg-6">
+            <h2>Core Values</h2>
+            <ul>
+                <li><strong>Customer Satisfaction:</strong> Ensuring our customers' needs are met with the highest level of service.</li>
+                <li><strong>Innovation:</strong> Embracing new technologies and design to create cutting-edge skooties.</li>
+                <li><strong>Sustainability:</strong> Commitment to eco-friendly practices and promoting green transportation.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Social Proof Section -->
+<section class="container py-5">
+    <h2 class="text-center mb-4">Social Proof</h2>
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="card testimonial text-center">
+                <div class="card-body">
+                    <div class="rounded-image">
+                        <img src="static\socialproof1.png" alt="Customer 1" class="img-fluid rounded-circle mb-3" width="150" height="150">
+                    </div>
+                    <p class="lead">"Skooty Display made my commute enjoyable and hassle-free. The personalized service and attention to detail set them apart."</p>
+                    <p class="font-weight-bold">- John Doe</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="card testimonial text-center">
+                <div class="card-body">
+                    <div class="rounded-image">
+                        <img src="static\socialproof2.png" alt="Customer 2" class="img-fluid rounded-circle mb-3" width="150" height="150">
+                    </div>
+                    <p class="lead">"Exceptional products and unmatched customer support. Skooty Display exceeded my expectations, making every ride an adventure."</p>
+                    <p class="font-weight-bold">- Jane Smith</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="card testimonial text-center">
+                <div class="card-body">
+                    <div class="rounded-image">
+                        <img src="static\socialproof3.png" alt="Customer 3" class="img-fluid rounded-circle mb-3" width="150" height="150">
+                    </div>
+                    <p class="lead">"I recommend Skooty Display to anyone seeking a blend of style, sustainability, and top-notch service. They truly care about their customers."</p>
+                    <p class="font-weight-bold">- Robert Johnson</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Team Section -->
+<section class="container py-5">
+    <h2 class="text-center mb-4">Meet Our Team</h2>
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="card team-member text-center">
+                <img src="static\people1.avif" alt="Team Member 1" class="card-img-topp rounded-circle">
+                <div class="card-body">
+                    <h4 class="card-title">John Doe</h4>
+                    <p class="card-text">Founder</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="card team-member text-center">
+                <img src="static\people2.avif" alt="Team Member 2" class="card-img-topp rounded-circle">
+                <div class="card-body">
+                    <h4 class="card-title">Jane Smith</h4>
+                    <p class="card-text">Designer</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="card team-member text-center">
+                <img src="static\people3.avif" alt="Team Member 3" class="card-img-topp rounded-circle">
+                <div class="card-body">
+                    <h4 class="card-title">Robert Johnson</h4>
+                    <p class="card-text">Engineer</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<a href="#top">Go to top</a>
+
+<!-- Call to Action Section -->
+<section class="bg-primary text-white py-5">
+    <div class="container text-center">
+        <h2 class="mb-4">Ready to Ride?</h2>
+        <p class="lead">Explore our collection and find the perfect skooty for your lifestyle. Join the skooty revolution today!</p>
+        <a href="javascript:void(0)" class="btn btn-light btn-lg" onclick="handleClick()">Explore Skooties</a>
+    </div>
+</section>
+
+<br>
+
+<br>
+<br>
+
+<script>
+    function handleClick() {
+        alert("Please choose a category from the above navigation bar.");
+      }
+    </script>
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+<style>
+    .rounded-image {
+        width: 150px; /* Set the desired width for the rounded image */
+        height: 150px; /* Set the desired height for the rounded image */
+        border-radius: 50%; /* Make it a circle by setting border-radius to 50% */
+        overflow: hidden; /* Ensure that the border is not affected by image overflow */
+        margin: 0 auto;
+        border: 1px solid #000;}
+
+    .card-body {
+            background-color: #f8f9fa; /* Add a light background color for better contrast */
+            padding: 20px;
+        }
+
+    /* Style for team member images */
+        .card-img-topp {
+            height: 300px; /* Set the desired height for the team member images */
+            object-fit: cover; /* Maintain aspect ratio without stretching the images */
+        }
+</style>
+
+</body>
+{% endblock body %}
+

@@ -1,0 +1,225 @@
+{% extends 'base.html' %}
+
+{% block title %}
+about
+{% endblock title %}
+
+{% block body %}
+<!-- Header Section -->
+<br id="top"><br>
+<header class="text-center py-5">
+    <div class="container">
+        <h1 class="display-4">Skooty Maintenance Services</h1>
+        <p class="lead">Keeping Your Skooty in Top Condition</p>
+    </div>
+</header>
+
+<section style="max-width: 1600px; margin: 0 auto; box-sizing: border-box;">
+<!-- Maintenance Services Section -->
+<section class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            <img src="static\maintenance2.png" class="card-img-top" alt="TVS Scooter Image" height="300" width="400">
+        </div>
+        <div class="col-lg-6">
+            <h2 class="mb-4">Our Maintenance Services</h2>
+            <ul class="list-group">
+                <li class="list-group-item"><i class="fas fa-check-circle text-success mr-2"></i> Skooty Diagnostics</li>
+                <li class="list-group-item"><i class="fas fa-check-circle text-success mr-2"></i> Regular Check-ups</li>
+                <li class="list-group-item"><i class="fas fa-check-circle text-success mr-2"></i> Battery Replacement</li>
+                <li class="list-group-item"><i class="fas fa-check-circle text-success mr-2"></i> Tire Maintenance</li>
+                <li class="list-group-item"><i class="fas fa-check-circle text-success mr-2"></i> Performance Optimization</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Form Section -->
+<section class="bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <h2 class="mb-4">Schedule Maintenance</h2>
+                <form method="post" action="/maintenance">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Your Phone</label>
+                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter your phone">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Schedule Now</button>
+                </form>
+            </div>
+            <div class="col-lg-6">
+                <h2 class="mb-4">Why Choose Us?</h2>
+                <ul class="list-group">
+                    <li class="list-group-item">Experienced Skooty Technicians</li>
+                    <li class="list-group-item">Quick Turnaround Time</li>
+                    <li class="list-group-item">Genuine Replacement Parts</li>
+                    <li class="list-group-item">Affordable Maintenance Plans</li>
+                    <li class="list-group-item">Customer Satisfaction Guarantee</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- How Maintenance Affects Section -->
+<section class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="static\maintenance1.png" class="card-img-top" alt="TVS Scooter Image" height="300" width="300">
+        </div>
+        <div class="col-md-6">
+            <h2 class="mb-4">How Maintenance Affects Skooty Life</h2>
+            <p>Regular maintenance significantly contributes to the extended life of your skooty by:</p>
+            <ul>
+                <li>Preventing premature wear and tear</li>
+                <li>Preserving engine performance</li>
+                <li>Ensuring proper functioning of key components</li>
+                <li>Increasing overall reliability</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- Tips to Maintain Section -->
+<section class="bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="mb-4">Tips to Maintain Your Skooty</h2>
+                <ul>
+                    <li>Regularly check and maintain tire pressure</li>
+                    <li>Change engine oil and filters as per the manufacturer's recommendations</li>
+                    <li>Inspect brake pads and replace if necessary</li>
+                    <li>Keep the battery terminals clean and secure</li>
+                    <li>Clean and lubricate the chain regularly</li>
+                    <li>Store your skooty in a cool and dry place</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <img src="static\maintenance3.png" class="card-img-top" alt="TVS Scooter Image" height="300" width="300">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Testimonials Section -->
+<section class="container py-5">
+    <h2 class="text-center mb-4">Customer Testimonials</h2>
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <p class="card-text">Skooty Display's maintenance services are top-notch! My skooty runs smoother than ever.</p>
+                    <p class="font-weight-bold">- John Doe</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <p class="card-text">I appreciate the quick turnaround time and the professionalism of the maintenance team.</p>
+                    <p class="font-weight-bold">- Jane Smith</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <p class="card-text">Skooty Display's maintenance plans are affordable and provide peace of mind.</p>
+                    <p class="font-weight-bold">- Robert Johnson</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="bg-light py-5">
+    <div class="container text-center">
+        <h2 class="mb-4">Upcoming Maintenance Event</h2>
+        <div id="countdown" class="display-4"></div>
+    </div>
+</section>
+</section>
+<a href="#top">Go to top</a>
+<br>
+<br>
+
+<br>
+<br>
+
+
+
+
+
+
+
+<!-- Bootstrap JS and Font Awesome Icons -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<!-- Optional: Countdown Timer Script -->
+<script src="https://cdn.rawgit.com/hilios/jQuery.countdown/2.2.0/dist/jquery.countdown.min.js"></script>
+<script>
+    // Set the end time for maintenance (adjust as needed)
+    var endTime = new Date('2024-03-10T12:00:00Z');
+    // Initialize countdown timer
+    $('#countdown').countdown(endTime, function(event) {
+        $(this).html(event.strftime('%H:%M:%S'));
+    });
+</script>
+
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+    }
+
+    header {
+        background-color: #343a40;
+        color: #fff;
+    }
+
+    section {
+        padding: 40px 0;
+    }
+
+    h2 {
+        color: #007bff;
+    }
+
+    ul.list-group {
+        border: none;
+    }
+
+    ul.list-group-item {
+        list-style: none;
+        border: none;
+    }
+
+    form {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    footer {
+        background-color: #343a40;
+        color: #fff;
+        padding: 20px 0;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+</style>
+{% endblock body %}
+

@@ -1,0 +1,625 @@
+{% comment %} <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Ola S1 Pro - Skooty Model</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+        }
+
+        .header {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .skooty-preview {
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .skooty-preview img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .skooty-info {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .color-options {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .circle {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin: 0 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .circle.red {
+            background-color: #ff4d4d;
+        }
+
+        .circle.black {
+            background-color: #333;
+        }
+
+        .circle.orange {
+            background-color: #ff9900;
+        }
+
+        .circle.white {
+            background-color: #FFF5EE;
+        }
+
+        .circle.yellow {
+            background-color: #ffd700;
+        }
+
+        .circle.blue {
+            background-color: #3498db;
+        }
+
+        .skooty-details {
+            margin-top: 20px;
+        }
+
+        .price-section {
+            margin-top: 20px;
+        }
+
+        .specifications {
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            border-radius: 5px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .offers {
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            border-radius: 5px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .offer-cards {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .offer-card {
+            width: 200px;
+            height: 200px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        .offer-card:hover {
+            border-color: #cc0000;
+        }
+
+        .book-now {
+            background-color: #ff6600;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        .book-now:hover {
+            background-color: #cc0000;
+        }
+
+        #userDetailsForm {
+            margin-top: 20px;
+            background-color: #FFFAFA;
+            padding: 20px;
+            border-radius: 5px;
+            display: none;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        #userDetailsForm input,
+        #userDetailsForm textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #userDetailsForm button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        #userDetailsForm button:hover {
+            background-color: #45a049;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="skooty-info">
+            <div class="skooty-preview">
+                <img id="skootyPreview" src="static\olalogo.png" alt="Ola S1 Pro">
+            </div>
+            <div class="color-options">
+                <div class="circle red" onclick="changeSkootyColor('red')"></div>
+                <div class="circle black" onclick="changeSkootyColor('black')"></div>
+                <div class="circle orange" onclick="changeSkootyColor('orange')"></div>
+                <div class="circle yellow" onclick="changeSkootyColor('yellow')"></div>
+                <div class="circle blue" onclick="changeSkootyColor('blue')"></div>
+                <div class="circle white" onclick="changeSkootyColor('white')"></div>
+            </div>
+            <div class="skooty-details">
+                <h3>Skooty Model: Ola S1 Pro</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla scelerisque augue ac felis feugiat, vel sodales dolor laoreet. Sed ut justo eu justo tincidunt fringilla.</p>
+                <div class="price-section">
+                    <h4>Price: $2,499</h4>
+                    <button onclick="showUserDetailsForm()">Buy Now</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="userDetailsForm">
+            <h3>Enter Your Details</h3>
+            <form method="post" action="/olas1pro" id="f" onsubmit="return processOrder()">
+                {% csrf_token %}
+                <label for="fullName">Full Name:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+                <label for="brandname">Brand and model name:</label><br>
+                <input type="text" id="brandname" name="brandname" required><br><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+                <label for="address">Address:</label><br>
+                <textarea id="address" name="address" required></textarea><br><br>
+                <button type="submit">Submit Order</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function showUserDetailsForm() {
+            document.getElementById('userDetailsForm').style.display = 'block';
+        }
+
+        function processOrder() {
+            alert('Order processed successfully!');
+            return false; // Prevent form submission for demonstration
+        }
+
+        function changeSkootyColor(color) {
+            const skootyPreview = document.getElementById('skootyPreview');
+            skootyPreview.src = `static/olas1pro${color}.png`;
+
+            const circles = document.querySelectorAll('.circle');
+            circles.forEach(circle => circle.classList.remove('active'));
+
+            const selectedCircle = document.querySelector(`.circle.${color}`);
+            selectedCircle.classList.add('active');
+        }
+    </script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html> {% endcomment %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Ola S1 Pro - Skooty Model</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+        }
+
+        .header {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        {% comment %} .skooty-preview {
+            width: 100%;
+            max-width: 600px;
+        } {% endcomment %}
+
+        .skooty-preview {
+            max-width: 800px; /* Adjust the max-width as needed */
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 600px; /* Set a fixed height */
+        }
+        
+        .skooty-preview img {
+            width: 100%%; /* Use 100% of the container width */
+            height: 700; /* Maintain aspect ratio */
+            object-fit: contain; /* Maintain aspect ratio and fit within the container */
+            border-radius: 10px;
+           
+        }
+        
+        .color-options {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .circle {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin: 0 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .circle.active {
+            border: 2px solid #333;
+        }
+
+        .circle.red {
+            background-color: #ff4d4d;
+        }
+
+        .circle.black {
+            background-color: #333;
+        }
+
+        .circle.orange {
+            background-color: #ff9900;
+        }
+
+        .circle.white {
+            background-color: #FFF5EE;
+        }
+
+        .circle.yellow {
+            background-color: #ffd700;
+        }
+
+        .circle.blue {
+            background-color: #3498db;
+        }
+
+        .skooty-details {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .price-section {
+            margin-top: 20px;
+        }
+
+        .price-section h4 {
+            color: #333;
+        }
+
+        .price-section button {
+            background-color: #ff6600;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .price-section button:hover {
+            background-color: #cc5500;
+        }
+
+        #userDetailsForm {
+            margin-top: 20px;
+            background-color: #FFFAFA;
+            padding: 20px;
+            border-radius: 5px;
+            display: none;
+            max-width: 600px; /* Increase the max-width for a wider form */
+            margin: 0 auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        #userDetailsForm input,
+        #userDetailsForm textarea {
+            width: calc(100% - 20px); /* Adjust the width of the input fields */
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        #userDetailsForm select{
+            width: calc(100% - 20px); /* Adjust the width of the input fields */
+            padding: 0px;
+            margin-bottom: 0px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        #userDetailsForm button {
+            width: calc(100% - 20px); /* Adjust the width of the button */
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #ff6600; /* Set a nice background color */
+            color: #fff; /* Set text color to white */
+            transition: background-color 0.3s; /* Add transition for smoother hover effect */
+        }
+        
+        #userDetailsForm button:hover {
+            background-color: #cc5500; /* Darken the background color on hover */
+        }
+
+        .specifications,
+.offers {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.specifications h2,
+.offers h2 {
+    color: #333;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.specifications ul {
+    list-style: none; /* Remove bullets */
+    padding: 0;
+}
+
+.specifications li {
+    color: #666;
+    margin-bottom: 5px; /* Adjust spacing between items */
+}
+
+.offers p {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+        .offers .offer-cards {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .offer-card {
+            width: 200px; /* Adjust the width as needed */
+            height: 200px; /* Adjust the height as needed */
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        .offer-card:hover {
+            border-color: #cc0000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="skooty-preview">
+            <img id="skootyPreview" src="static\tvslogo.png" alt="Ola S1 Pro">
+        </div>
+        <div class="color-options">
+           
+            <div class="circle black" onclick="changeSkootyColor('black')"></div>
+           
+            <div class="circle yellow" onclick="changeSkootyColor('yellow')"></div>
+            <div class="circle blue" onclick="changeSkootyColor('blue')"></div>
+            
+        </div>
+        <div class="skooty-details">
+            <h3>Skooty Model: Tvs iqubes</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla scelerisque augue ac felis feugiat, vel sodales dolor laoreet. Sed ut justo eu justo tincidunt fringilla.</p>
+            <div class="specifications">
+                <h2>Specifications</h2>
+                <ul>
+                    <li><strong>Battery:</strong> Lithium-ion</li>
+                    <li><strong>Range:</strong> Up to 150 km per charge</li>
+                    <li><strong>Top Speed:</strong> 70 km/h</li>
+                    <li><strong>Charging Time:</strong> 4-6 hours</li>
+                    <li><strong>Motor Type:</strong> Electric Brushless Motor</li>
+                    <li><strong>Acceleration:</strong> 0 to 50 km/h in 5 seconds</li>
+                    <li><strong>Braking System:</strong> Disc brakes (Front and Rear)</li>
+                    <li><strong>Suspension:</strong> Front telescopic, Rear twin shock absorbers</li>
+                    <!-- Add more specifications as needed -->
+                </ul>
+            </div>
+            
+
+            <div class="offers">
+                <h2>Available Offers</h2>
+                <div class="offer-cards">
+                    <!-- Example offers -->
+                    <div class="offer-card" onclick="selectOffer(1)">
+                        <h3>Cashback of $200 on purchase</h3>
+                        <p>Get a $200 cashback when you purchase the Ola S1 Pro</p>
+                    </div>
+
+                    <div class="offer-card" onclick="selectOffer(2)">
+                        <h3>Free helmet with every booking</h3>
+                        <p>Receive a free helmet with every booking of the Ola S1 Pro</p>
+                    </div>
+
+                    <!-- Dynamic offers from Django -->
+                    {% for offer in skooty_offers %}
+                        <div class="offer-card" onclick="selectOffer('{{ offer.id }}')">
+                            <h3>{{ offer.title }}</h3>
+                            <p>{{ offer.description }}</p>
+                        </div>
+                    {% endfor %}
+                </div>
+
+                <div id="selectedOfferDisplay" style="display: none;">
+                    <h2>Selected Offer</h2>
+                    <p id="selectedOfferText"></p>
+                </div>
+            </div>
+        </div>
+            <div class="price-section">
+                <h4>Price: $2,499</h4>
+                <button onclick="showUserDetailsForm()">Buy Now</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="userDetailsForm">
+        <h3>Enter Your Details</h3>
+        <form method="post" action="/olas1pro" id="f" >
+            {% csrf_token %}
+            <label for="fullName">Full Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="brandname">Brand name:</label>
+            <select class="form-control" id="licenseType" name="brandname" required>
+             <option value="tvsiqubes">tvs iqubes</option><br>
+           
+        </select><br>
+           
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="address">Address:</label><br>
+            <textarea id="address" name="address" required></textarea><br><br>
+            <button type="submit">Submit Order</button>
+        </form>
+    </div>
+
+    <script>
+        function showUserDetailsForm() {
+            document.getElementById('userDetailsForm').style.display = 'block';
+        }
+
+        function processOrder() {
+            alert('Order processed successfully!');
+            return false; // Prevent form submission for demonstration
+        }
+
+        function changeSkootyColor(color) {
+            const skootyPreview = document.getElementById('skootyPreview');
+            skootyPreview.src = `static/tvsiqubes${color}.png`;
+
+            const circles = document.querySelectorAll('.circle');
+            circles.forEach(circle => circle.classList.remove('active'));
+
+            const selectedCircle = document.querySelector(`.circle.${color}`);
+            selectedCircle.classList.add('active');
+        }
+        function getOfferText(offerId) {
+            // Return the offer text based on the offerId (you may fetch from Django model or predefined function)
+            // For now, let's return example text
+            switch (offerId) {
+                case 1:
+                    return "Cashback of $200 on purchase - Get a $200 cashback when you purchase the Ola S1 Pro";
+                case 2:
+                    return "Free helmet with every booking - Receive a free helmet with every booking of the Ola S1 Pro";
+                // Add more cases for other offers
+                default:
+                    return "Unknown offer";
+            }
+        }
+        function selectOffer(offerId) {
+            // Fetch offer details using AJAX or redirect to a new page with offer details
+            // For now, let's just display the selected offer
+            const selectedOfferText = document.getElementById('selectedOfferText');
+            const selectedOfferDisplay = document.getElementById('selectedOfferDisplay');
+
+            // Display selected offer
+            selectedOfferText.textContent = getOfferText(offerId);
+            selectedOfferDisplay.style.display = 'block';
+        }
+    </script>
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>

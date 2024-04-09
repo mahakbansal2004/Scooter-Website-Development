@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+
+{% block title %}
+contact
+{% endblock title %}
+
+{% block body %}
+<br id="top"><br>
+{% comment %} <div class="container-fluid px-0">
+    <img src="https://source.unsplash.com/1600x400/?phone,contact" class="d-block w-100 my-4" alt="First Slide"> {% endcomment %}
+<!-- Header Section -->
+<header class="bg-dark text-white text-center py-5">
+  <h1 class="display-5">Contact Skooty Display</h1>
+  <p class="lead">Get in touch with us for any inquiries or assistance.</p>
+</header>
+{% comment %} <img src="static\contact1.png" alt="Example Image" width="500" height="300"> {% endcomment %}
+
+<!-- Contact Form Section -->
+<section class="container py-5" style="max-width: 1600px; margin: 0 auto; box-sizing: border-box;">
+  <div class="row">
+      <div class="col-md-6">
+          <form method="post" action="/contact">
+            {% csrf_token %}
+              <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
+              </div>
+              <div class="form-group">
+                  <label for="phone no.">Phone no.</label>
+                  <input type="phone" class="form-control" id="email" name="phone" placeholder="Enter your phone no.">
+              </div>
+              <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email">
+              </div>
+              <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea class="form-control" id="message" rows="4" name="desc" placeholder="Type your message"></textarea>
+                  <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
+          </form>
+      </div>
+      
+    
+            <div class="col-md-6">
+                <div class="bg-light p-5">
+                    <h3 class="mb-4">Visit Us</h3>
+                    <p class="lead">Experience our skooties in person at our showroom.</p>
+                    <address class="mb-4">
+                        <strong>Skooty Display Showroom</strong><br>
+                        123 Skooty Street<br>
+                        Cityville, SK 12345<br>
+                        <i class="fas fa-phone"></i> +1 (123) 456-7890
+                    </address>
+    <br>
+                    <h3 class="mb-4">Connect With Us</h3>
+                   
+                <div class="contact-icons">
+                <a href="https://www.instagram.com/" class="btn btn-outline-primary mr-3"><i class="fab fa-instagram"></i> Instagram</a>
+                <a href="https://www.facebook.com/" class="btn btn-outline-primary mr-3"><i class="fab fa-facebook"></i> Facebook</a>
+                <a href="mailto:your_email@example.com" class="btn btn-outline-primary mr-3"><i class="fas fa-envelope"></i> Email</a>
+                <a href="tel:+123456789" class="btn btn-outline-primary"><i class="fas fa-phone"></i> Phone</a>
+            </div>
+                </div>
+            </div>
+      
+
+<!-- Google Map Section (Replace the API key and coordinates with your own) -->
+<section class="container-fluid py-5">
+  <div class="row">
+      <div class="col">
+          <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3152.1599744552253!2d-122.0838!3d37.386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fbc3ef03b7f7d%3A0xe8d26a1e83f16118!2sGolden%20Gate%20Bridge!5e0!3m2!1sen!2sus!4v1632448433285!5m2!1sen!2sus"
+                  allowfullscreen></iframe>
+          </div>
+      </div>
+  </div>
+  <a href="#top">Go to top</a>
+</section>
+
+
+
+
+
+<!-- Bootstrap JS and Font Awesome Icons -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+{% endblock body %}
+
+
+
+
+
+  
+  
+  
+  
+
+

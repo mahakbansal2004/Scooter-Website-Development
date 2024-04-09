@@ -1,0 +1,348 @@
+<html>
+
+ <title>
+ contact
+ </title>
+ 
+ <body>
+    
+ <div class="header" id="top">
+    <h1><br>RIVER INDIE Skooty Warranty</h1>
+</div>
+<div class="container">
+     <br><br>
+    <div class="features">
+        <div class="feature">
+            <h3>1 Year Limited Warranty</h3>
+            <p>Our skooty comes with a 1-year limited warranty covering manufacturing defects.</p>
+        </div>
+        <div class="feature">
+            <h3>Free Service for First 6 Months</h3>
+            <p>Enjoy free servicing of your skooty for the first 6 months after purchase.</p>
+        </div>
+        <div class="feature">
+            <h3>24/7 Customer Support</h3>
+            <p>We provide round-the-clock customer support to assist you with any issues or queries.</p>
+        </div>
+    </div>
+    
+   
+<br>
+<br>
+<div class="cta-section">
+<p class="warranty-details">For more details on warranty terms and conditions, please refer to the warranty booklet provided with your skooty.</p>
+<p class="contact-info">If you have any questions or need assistance, feel free to contact us:</p>
+<div class="contact">
+<p><strong>Email:</strong> <a href="mailto:support@tvsskooty.com">support@tvsskooty.com</a></p>
+<p><strong>Phone:</strong> <a href="tel:1-800-123-4567">1-800-123-4567</a></p>
+</div>
+
+
+    <div>
+        <a href="javascript:void(0)" class="button">Register Your Warranty</a>
+    </div>
+</div>
+
+<div class="form-container" id="warranty-form" style="max-width: 500px; margin: 0 auto; box-sizing: border-box;">
+    <h2>Register Your Warranty</h2>
+    <form method="post" action="/tvswarranty">
+        {% csrf_token %}
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="brandname">Brand name:</label>
+        <select class="form-control" id="licenseType" name="brandname" required>
+        <option value="RIVERINDIE">RIVER INDIE</option>
+        </select><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone:</label>
+        <input type="phone" id="phone" name="phone" required>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+
+
+<br><br>
+{% comment %} 
+    <div class="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item" onclick="toggleAnswer(this)">
+            <h4>What does the warranty cover?</h4>
+            <p>This warranty covers manufacturing defects in materials and workmanship.</p>
+        </div>
+        <div class="faq-item" onclick="toggleAnswer(this)">
+            <h4>How do I claim warranty service?</h4>
+            <p>To claim warranty service, please contact our customer support team.</p>
+        </div>
+        <div class="faq-item" onclick="toggleAnswer(this)">
+            <h4>Is regular maintenance covered under warranty?</h4>
+            <p>No, regular maintenance is not covered under warranty.</p>
+        </div>
+    </div> {% endcomment %}
+    <div class="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item" onclick="toggleAnswer(this)">
+            <h4>What does the warranty cover?</h4>
+            <p>This warranty covers manufacturing defects in materials and workmanship.</p>
+        </div>
+        <div class="faq-item" onclick="toggleAnswer(this)">
+            <h4>How do I claim warranty service?</h4>
+            <p>To claim warranty service, please contact our customer support team.</p>
+        </div>
+        <div class="more-faqs" style="display: none;">
+            <div class="faq-item" onclick="toggleAnswer(this)">
+                <h4>Is regular maintenance covered under warranty?</h4>
+                <p>No, regular maintenance is not covered under warranty.</p>
+            </div>
+            <div class="faq-item" onclick="toggleAnswer(this)">
+                <h4>What is the warranty period?</h4>
+                <p>The warranty period is one year from the date of purchase.</p>
+            </div>
+            <!-- Add more FAQ items here -->
+        </div>
+        <a href="javascript:void(0)" class="show-more" onclick="showMoreFAQs()">Show more FAQs</a>
+    </div>
+</div>
+
+<a href="#top">Go to top</a>
+
+<!-- Bootstrap JS and Font Awesome Icons -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<script>
+    function toggleAnswer(item) {
+        item.classList.toggle('active');
+    }
+    document.querySelector('.button').addEventListener('click', function() {
+        document.getElementById('warranty-form').classList.add('show');
+    });
+
+    function toggleAnswer(item) {
+        item.classList.toggle('active');
+    }
+
+    document.querySelector('.button').addEventListener('click', function() {
+        document.getElementById('warranty-form').classList.add('show');
+    });
+    function showMoreFAQs() {
+        var moreFAQs = document.querySelector('.more-faqs');
+        var showMoreLink = document.querySelector('.show-more');
+        if (moreFAQs.style.display === 'none') {
+            moreFAQs.style.display = 'block';
+            showMoreLink.textContent = 'Show fewer FAQs';
+        } else {
+            moreFAQs.style.display = 'none';
+            showMoreLink.textContent = 'Show more FAQs';
+        }
+    }
+    
+</script>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+        color: #444;
+    }
+    .container {
+        width: 80%;
+        margin: 50px auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1, h2 {
+        text-align: center;
+        color: #007bff;
+        height:120;
+    }
+    p {
+        margin-bottom: 20px;
+    }
+    .features {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .feature {
+        width: calc(33.33% - 20px);
+        margin-bottom: 20px;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+    }
+    .feature:hover {
+        transform: translateY(-5px);
+    }
+    .feature h3 {
+        margin-top: 0;
+        color: #007bff;
+    }
+    .feature p {
+        margin-bottom: 10px;
+    }
+    .button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+    .button:hover {
+        background-color: #0056b3;
+    }
+    .contact {
+        text-align: center; 
+        margin-top: 40px;
+    }
+    .contact p {
+        margin-bottom: 5px;
+    }
+    .faq {
+        margin-top: 40px;
+    }
+    .faq-item {
+        margin-bottom: 20px;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 20px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    .faq-item:last-child {
+        border-bottom: none;
+    }
+    .faq-item:hover {
+        background-color: #f9f9f9;
+    }
+    .faq-item h4 {
+        margin-top: 0;
+        color: #007bff;
+    }
+    .faq-item p {
+        display: none;
+    }
+    .faq-item.active p {
+        display: block;
+    }
+    .warranty-details {
+        margin-bottom: 20px;
+        font-size: 16px;
+        line-height: 1.6;
+    }
+    
+    .contact-info {
+        margin-bottom: 10px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    
+    .contact {
+        text-align: center;
+    }
+    
+    .contact p {
+        margin-bottom: 5px;
+        font-size: 16px;
+        line-height: 1.6;
+    }
+    
+    .contact a {
+        color: #007bff;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+    
+    .contact a:hover {
+        color: #0056b3;
+    }
+
+    .cta-section {
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        margin-top: 30px;
+    }
+    
+    .cta-section .button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+    
+    .cta-section .button:hover {
+        background-color: #0056b3;
+    }
+    .header {
+        background-color: #007bff;
+        padding: 20px 0;
+        text-align: center;
+    }
+    .header h1 {
+        color: #fff; /* Change color to white */
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin: 1;
+    }
+
+    .form-container {
+        display: none; /* Hide form by default */
+        padding: 20px;
+    }
+
+    .form-container.show {
+        display: block; /* Show form when needed */
+    }
+
+    label {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"] {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+</style>
+
+</body>
+</html>

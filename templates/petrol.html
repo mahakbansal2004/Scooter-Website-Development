@@ -1,0 +1,652 @@
+{% extends 'base.html' %}
+
+{% block title %}
+about
+{% endblock title %}
+
+{% block body %}
+{% comment %} <img src="C:/Users/admin/Documents/skooty_project/one/pics/a.PNG" class="d-block w-100 " alt="..."> {% endcomment %}
+
+
+<brid="top"><br>
+<div class="container-fluid bg-dark py-4" style="max-width: 2000px; margin: 0 auto; box-sizing: border-box;">
+    <h1 class="text-center fw-bold text-light">
+      TVS SKOOTERS
+    </h1>
+  </div>
+
+
+  <main class="container mt-4">
+    <!-- TVS Scooters -->
+    <section class="mb-4">
+      <div class="row">
+        <!-- Card 1 -->
+        <div class="col-md-3 mb-4">
+          <div class="card border-dark shadow-lg">
+            <img src="static\petroltvs1.png" class="card-img-top" alt="TVS Scooter Image" height="200" width="100">
+            <div class="card-body">
+              <h3 class="card-title text-primary">Jupiter</h3>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod euismod nisi, sed vestibulum velit feugiat vitae.</p>
+              <p class="card-text"><strong>Warranty:</strong> 2 years</p>
+            </div>
+            <div class="card-footer bg-transparent border-top text-center">
+              <a href="tvsjupiter" class="btn btn-outline-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+         <!-- Card 2 -->
+        <div class="col-md-3 mb-4">
+            <div class="card border-dark shadow-lg">
+              <img src="static\petroltvs2.png" class="card-img-top" alt="TVS Scooter Image" height="200" width="100">
+              <div class="card-body">
+                <h3 class="card-title text-primary">Jupiter 125</h3>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod euismod nisi, sed vestibulum velit feugiat vitae.</p>
+                <p class="card-text"><strong>Warranty:</strong> 2 years</p>
+              </div>
+              <div class="card-footer bg-transparent border-top text-center">
+                <a href="tvsjupiter125" class="btn btn-outline-primary">Learn More</a>
+              </div>
+            </div>
+          </div>
+          <!-- Card 3 -->
+        <div class="col-md-3 mb-4">
+            <div class="card border-dark shadow-lg">
+              <img src="static\petroltvs3.png" class="card-img-top" alt="TVS Scooter Image" height="200" width="100">
+              <div class="card-body">
+                <h3 class="card-title text-primary">Ntorq</h3>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod euismod nisi, sed vestibulum velit feugiat vitae.</p>
+                <p class="card-text"><strong>Warranty:</strong> 2 years</p>
+              </div>
+              <div class="card-footer bg-transparent border-top text-center">
+                <a href="tvsntorq" class="btn btn-outline-primary">Learn More</a>
+              </div>
+            </div>
+          </div> 
+          <!-- Card 4 -->
+        <div class="col-md-3 mb-4">
+            <div class="card border-dark shadow-lg">
+              <img src="static\petroltvs4.png" class="card-img-top" alt="TVS Scooter Image" height="200" width="100">
+              <div class="card-body">
+                <h3 class="card-title text-primary">Zest</h3>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod euismod nisi, sed vestibulum velit feugiat vitae.</p>
+                <p class="card-text"><strong>Warranty:</strong> 2 years</p>
+              </div>
+              <div class="card-footer bg-transparent border-top text-center">
+                <a href="tvszest" class="btn btn-outline-primary">Learn More</a>
+              </div>
+            </div>
+          </div>
+        <!-- Add more TVS scooters as needed -->
+      </div>
+    </section>
+</main>
+
+
+
+
+  {% comment %} <div class="container mt-5">
+    <div class="card-deck">
+      <!-- Card 1 -->
+      <div class="card">
+        <img src="https://via.placeholder.com/300" class="card-img-top" alt="Card Image 1">
+        <div class="card-body">
+          <h5 class="card-title">Jupiter</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">An item</li>
+            <li class="list-group-item">A second item</li>
+            <li class="list-group-item">A third item</li>
+          </ul>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Last updated 3 mins ago</small>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="card">
+        <img src="https://via.placeholder.com/300" class="card-img-top" alt="Card Image 2">
+        <div class="card-body">
+          <h5 class="card-title">Jupiter 125</h5>
+          <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">An item</li>
+            <li class="list-group-item">A second item</li>
+            <li class="list-group-item">A third item</li>
+          </ul>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Last updated 3 mins ago</small>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="card">
+        <img src="https://via.placeholder.com/300" class="card-img-top" alt="Card Image 3">
+        <div class="card-body">
+          <h5 class="card-title">Ntorq</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">An item</li>
+            <li class="list-group-item">A second item</li>
+            <li class="list-group-item">A third item</li>
+          </ul>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Last updated 3 mins ago</small>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/300" class="card-img-top" alt="Card Image 3">
+        <div class="card-body">
+          <h5 class="card-title">Zest</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">An item</li>
+            <li class="list-group-item">A second item</li>
+            <li class="list-group-item">A third item</li>
+          </ul>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Last updated 3 mins ago</small>
+        </div>
+      </div>
+    </div>
+  </div> {% endcomment %}
+
+
+
+
+  
+  <div class="container-fluid bg-dark py-4">
+    <h1 class="text-center fw-bold text-light">
+      SUZUKI SKOOTERS
+    </h1>
+  </div>
+
+
+  <main class="container mt-4">
+    <!-- TVS Scooters -->
+    <section class="mb-4">
+  
+      <div class="row">
+        <!-- Card 1 -->
+        <div class="col-md-4 mb-4">
+          <div class="card border-dark shadow-lg">
+            <img src="static\petrolsuzuki1.png" class="card-img-top" alt="TVS Scooter Image" height="300" width="100">
+            <div class="card-body">
+              <h3 class="card-title text-primary">Acess 125</h3>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod euismod nisi, sed vestibulum velit feugiat vitae.</p>
+              <p class="card-text"><strong>Warranty:</strong> 2 years</p>
+            </div>
+            <div class="card-footer bg-transparent border-top text-center">
+              <a href="suzukiaccess125" class="btn btn-outline-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+         <!-- Card 2 -->
+        <div class="col-md-4 mb-4">
+            <div class="card border-dark shadow-lg">
+              <img src="static\petrolsuzuki2.png" class="card-img-top" alt="TVS Scooter Image" height="300" width="100">
+              <div class="card-body">
+                <h3 class="card-title text-primary">Avenis 125</h3>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod euismod nisi, sed vestibulum velit feugiat vitae.</p>
+                <p class="card-text"><strong>Warranty:</strong> 2 years</p>
+              </div>
+              <div class="card-footer bg-transparent border-top text-center">
+                <a href="suzukiavenis125" class="btn btn-outline-primary">Learn More</a>
+              </div>
+            </div>
+          </div>
+          <!-- Card 3 -->
+        <div class="col-md-4 mb-4">
+            <div class="card border-dark shadow-lg">
+              <img src="static\petrolsuzuki3.png" class="card-img-top" alt="TVS Scooter Image" height="300" width="100">
+              <div class="card-body">
+                <h3 class="card-title text-primary">Burgman 125</h3>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod euismod nisi, sed vestibulum velit feugiat vitae.</p>
+                <p class="card-text"><strong>Warranty:</strong> 2 years</p>
+              </div>
+              <div class="card-footer bg-transparent border-top text-center">
+                <a href="suzukiburgman125" class="btn btn-outline-primary">Learn More</a>
+              </div>
+            </div>
+          </div> 
+        <!-- Add more TVS scooters as needed -->
+      </div>
+    </section>
+
+    <!-- Add sections for other scooter brands (Suzuki, Hero, Yamaha, Honda) -->
+  </main>
+
+
+  {% comment %} <div class="container mt-5">
+    <div class="card-deck">
+      <!-- Card 1 -->
+      <div class="card">
+        <img src="https://via.placeholder.com/300" class="card-img-top" alt="Card Image 1">
+        <div class="card-body">
+          <h5 class="card-title">Access 125</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">An item</li>
+            <li class="list-group-item">A second item</li>
+            <li class="list-group-item">A third item</li>
+          </ul>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Last updated 3 mins ago</small>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="card">
+        <img src="https://via.placeholder.com/300" class="card-img-top" alt="Card Image 2">
+        <div class="card-body">
+          <h5 class="card-title">Avenis 125</h5>
+          <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">An item</li>
+            <li class="list-group-item">A second item</li>
+            <li class="list-group-item">A third item</li>
+          </ul>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Last updated 3 mins ago</small>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="card">
+        <img src="https://via.placeholder.com/300" class="card-img-top" alt="Card Image 3">
+        <div class="card-body">
+          <h5 class="card-title">Burgman 125</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">An item</li>
+            <li class="list-group-item">A second item</li>
+            <li class="list-group-item">A third item</li>
+          </ul>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Last updated 3 mins ago</small>
+        </div>
+      </div>
+    </div>
+  </div> {% endcomment %}
+
+
+
+
+  <div class="container-fluid bg-dark py-4">
+    <h1 class="text-center fw-bold text-light">
+      HERO SKOOTERS
+    </h1>
+  </div>
+
+  <main class="container mt-4">
+    <!-- TVS Scooters -->
+    <section class="mb-4">
+      
+      <div class="row">
+        <!-- Card 1 -->
+        <div class="col-md-4 mb-4">
+          <div class="card border-dark shadow-lg">
+            <img src="static\petrolhero1.png" class="card-img-top" alt="TVS Scooter Image" height="300" width="100">
+            <div class="card-body">
+              <h3 class="card-title text-primary">Pleasure Plus</h3>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod euismod nisi, sed vestibulum velit feugiat vitae.</p>
+              <p class="card-text"><strong>Warranty:</strong> 2 years</p>
+            </div>
+            <div class="card-footer bg-transparent border-top text-center">
+              <a href="heropleasureplus" class="btn btn-outline-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+         <!-- Card 2 -->
+        <div class="col-md-4 mb-4">
+            <div class="card border-dark shadow-lg">
+              <img src="static\petrolhero2.png" class="card-img-top" alt="TVS Scooter Image" height="300" width="100">
+              <div class="card-body">
+                <h3 class="card-title text-primary">Destini 125</h3>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod euismod nisi, sed vestibulum velit feugiat vitae.</p>
+                <p class="card-text"><strong>Warranty:</strong> 2 years</p>
+              </div>
+              <div class="card-footer bg-transparent border-top text-center">
+                <a href="herodestini125" class="btn btn-outline-primary">Learn More</a>
+              </div>
+            </div>
+          </div>
+          <!-- Card 3 -->
+        <div class="col-md-4 mb-4">
+            <div class="card border-dark shadow-lg">
+              <img src="static\petrolhero3.png" class="card-img-top" alt="TVS Scooter Image" height="300" width="100">
+              <div class="card-body">
+                <h3 class="card-title text-primary">XOOM 110</h3>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod euismod nisi, sed vestibulum velit feugiat vitae.</p>
+                <p class="card-text"><strong>Warranty:</strong> 2 years</p>
+              </div>
+              <div class="card-footer bg-transparent border-top text-center">
+                <a href="heroxoom110" class="btn btn-outline-primary">Learn More</a>
+              </div>
+            </div>
+          </div> 
+        <!-- Add more TVS scooters as needed -->
+      </div>
+    </section>
+
+    <!-- Add sections for other scooter brands (Suzuki, Hero, Yamaha, Honda) -->
+  </main>
+  {% comment %} <div class="container mt-5">
+    <div class="card-deck">
+      <!-- Card 1 -->
+      <div class="card">
+        <img src="https://via.placeholder.com/300" class="card-img-top" alt="Card Image 1">
+        <div class="card-body">
+          <h5 class="card-title">XOOM 110</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">An item</li>
+            <li class="list-group-item">A second item</li>
+            <li class="list-group-item">A third item</li>
+          </ul>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Last updated 3 mins ago</small>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="card">
+        <img src="https://via.placeholder.com/300" class="card-img-top" alt="Card Image 2">
+        <div class="card-body">
+          <h5 class="card-title">Destini 125</h5>
+          <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">An item</li>
+            <li class="list-group-item">A second item</li>
+            <li class="list-group-item">A third item</li>
+          </ul>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Last updated 3 mins ago</small>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="card">
+        <img src="https://via.placeholder.com/300" class="card-img-top" alt="Card Image 3">
+        <div class="card-body">
+          <h5 class="card-title">Destini Prime</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">An item</li>
+            <li class="list-group-item">A second item</li>
+            <li class="list-group-item">A third item</li>
+          </ul>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Last updated 3 mins ago</small>
+        </div>
+      </div>
+    </div>
+  </div> {% endcomment %}
+
+
+
+
+
+  <div class="container-fluid bg-dark py-4">
+    <h1 class="text-center fw-bold text-light">
+    YAMAHA SKOOTERS
+    </h1>
+  </div>
+  <main class="container mt-4">
+    <!-- TVS Scooters -->
+    <section class="mb-4">
+      
+      <div class="row">
+        <!-- Card 1 -->
+        <div class="col-md-4 mb-4">
+          <div class="card border-dark shadow-lg">
+            <img src="static\petrolyamaha1.png" class="card-img-top" alt="TVS Scooter Image" height="300" width="100">
+            <div class="card-body">
+              <h3 class="card-title text-primary">RayZR 125 Fi Hybrid</h3>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod euismod nisi, sed vestibulum velit feugiat vitae.</p>
+              <p class="card-text"><strong>Warranty:</strong> 2 years</p>
+            </div>
+            <div class="card-footer bg-transparent border-top text-center">
+              <a href="yamaharayzr125" class="btn btn-outline-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+         <!-- Card 2 -->
+        <div class="col-md-4 mb-4">
+            <div class="card border-dark shadow-lg">
+              <img src="static\petrolyamaha2.png" class="card-img-top" alt="TVS Scooter Image" height="300" width="100">
+              <div class="card-body">
+                <h3 class="card-title text-primary">Aerox 155</h3>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod euismod nisi, sed vestibulum velit feugiat vitae.</p>
+                <p class="card-text"><strong>Warranty:</strong> 2 years</p>
+              </div>
+              <div class="card-footer bg-transparent border-top text-center">
+                <a href="yamahaaerox155" class="btn btn-outline-primary">Learn More</a>
+              </div>
+            </div>
+          </div>
+          <!-- Card 3 -->
+        <div class="col-md-4 mb-4">
+            <div class="card border-dark shadow-lg">
+              <img src="static\petrolyamaha3.png" class="card-img-top" alt="TVS Scooter Image" height="300" width="100">
+              <div class="card-body">
+                <h3 class="card-title text-primary">Fascino 125 Fi Hybrid</h3>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod euismod nisi, sed vestibulum velit feugiat vitae.</p>
+                <p class="card-text"><strong>Warranty:</strong> 2 years</p>
+              </div>
+              <div class="card-footer bg-transparent border-top text-center">
+                <a href="yamahafascino125" class="btn btn-outline-primary">Learn More</a>
+              </div>
+            </div>
+          </div> 
+        <!-- Add more TVS scooters as needed -->
+      </div>
+    </section>
+
+    <!-- Add sections for other scooter brands (Suzuki, Hero, Yamaha, Honda) -->
+  </main>
+
+  {% comment %} <div class="container mt-5">
+    <div class="card-deck">
+      <!-- Card 1 -->
+      <div class="card">
+        <img src="https://via.placeholder.com/300" class="card-img-top" alt="Card Image 1">
+        <div class="card-body">
+          <h5 class="card-title">RayZR 125</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">An item</li>
+            <li class="list-group-item">A second item</li>
+            <li class="list-group-item">A third item</li>
+          </ul>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Last updated 3 mins ago</small>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="card">
+        <img src="https://via.placeholder.com/300" class="card-img-top" alt="Card Image 2">
+        <div class="card-body">
+          <h5 class="card-title">Aerox 155</h5>
+          <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">An item</li>
+            <li class="list-group-item">A second item</li>
+            <li class="list-group-item">A third item</li>
+          </ul>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Last updated 3 mins ago</small>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="card">
+        <img src="https://via.placeholder.com/300" class="card-img-top" alt="Card Image 2">
+        <div class="card-body">
+          <h5 class="card-title">Fascino 125</h5>
+          <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">An item</li>
+            <li class="list-group-item">A second item</li>
+            <li class="list-group-item">A third item</li>
+          </ul>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Last updated 3 mins ago</small>
+        </div>
+      </div> {% endcomment %}
+
+
+
+
+      <div class="container-fluid bg-dark py-4">
+        <h1 class="text-center fw-bold text-light">
+        HONDA SKOOTERS
+        </h1>
+      </div>
+      <main class="container mt-4">
+        <!-- TVS Scooters -->
+        <section class="mb-4">
+          
+          <div class="row">
+            <!-- Card 1 -->
+            <div class="col-md-4 mb-4">
+              <div class="card border-dark shadow-lg">
+                <img src="static\petrolhonda1.png" class="card-img-top" alt="TVS Scooter Image" height="300" width="100">
+                <div class="card-body">
+                  <h3 class="card-title text-primary">Activa 6G</h3>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod euismod nisi, sed vestibulum velit feugiat vitae.</p>
+                  <p class="card-text"><strong>Warranty:</strong> 2 years</p>
+                </div>
+                <div class="card-footer bg-transparent border-top text-center">
+                  <a href="hondaactiva6g" class="btn btn-outline-primary">Learn More</a>
+                </div>
+              </div>
+            </div>
+             <!-- Card 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="card border-dark shadow-lg">
+                  <img src="static\petrolhonda2.png" class="card-img-top" alt="TVS Scooter Image" height="300" width="100">
+                  <div class="card-body">
+                    <h3 class="card-title text-primary">Activa 125</h3>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod euismod nisi, sed vestibulum velit feugiat vitae.</p>
+                    <p class="card-text"><strong>Warranty:</strong> 2 years</p>
+                  </div>
+                  <div class="card-footer bg-transparent border-top text-center">
+                    <a href="hondaactiva125" class="btn btn-outline-primary">Learn More</a>
+                  </div>
+                </div>
+              </div>
+              <!-- Card 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="card border-dark shadow-lg">
+                  <img src="static\petrolhonda3.png" class="card-img-top" alt="TVS Scooter Image" height="300" width="100">
+                  <div class="card-body">
+                    <h3 class="card-title text-primary">Dio</h3>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod euismod nisi, sed vestibulum velit feugiat vitae.</p>
+                    <p class="card-text"><strong>Warranty:</strong> 2 years</p>
+                  </div>
+                  <div class="card-footer bg-transparent border-top text-center">
+                    <a href="hondadio" class="btn btn-outline-primary">Learn More</a>
+                  </div>
+                </div>
+              </div> 
+            <!-- Add more TVS scooters as needed -->
+          </div>
+        </section>
+    
+        <!-- Add sections for other scooter brands (Suzuki, Hero, Yamaha, Honda) -->
+      </main>
+      <a href="#top">Go to top</a>
+      <br>
+      <br>
+      <br>
+      <br>
+
+      {% comment %} <div class="container mt-5">
+        <div class="card-deck">
+          <!-- Card 1 -->
+          <div class="card">
+            <img src="https://via.placeholder.com/300" class="card-img-top" alt="Card Image 1">
+            <div class="card-body">
+              <h5 class="card-title">Deo 125</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">An item</li>
+                <li class="list-group-item">A second item</li>
+                <li class="list-group-item">A third item</li>
+              </ul>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted">Last updated 3 mins ago</small>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="card">
+            <img src="https://via.placeholder.com/300" class="card-img-top" alt="Card Image 2">
+            <div class="card-body">
+              <h5 class="card-title">Activa 125</h5>
+              <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">An item</li>
+                <li class="list-group-item">A second item</li>
+                <li class="list-group-item">A third item</li>
+              </ul>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted">Last updated 3 mins ago</small>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="card">
+            <img src="https://via.placeholder.com/300" class="card-img-top" alt="Card Image 2">
+            <div class="card-body">
+              <h5 class="card-title">Activa 6G</h5>
+              <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">An item</li>
+                <li class="list-group-item">A second item</li>
+                <li class="list-group-item">A third item</li>
+              </ul>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted">Last updated 3 mins ago</small>
+            </div>
+          </div> {% endcomment %}
+      
+          <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+          <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+          <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+
+          <style>
+            @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+              /* Retina-specific styles here */
+           }
+           image-resolution: from-image;
+           image-resolution: 300dpi;
+           image-resolution: from-image 300dpi;
+           image-resolution: 300dpi snap;
+           
+           /* Global values */
+           image-resolution: inherit;
+           image-resolution: initial;
+           image-resolution: revert;
+           image-resolution: revert-layer;
+           image-resolution: unset;
+           
+
+           @media print {
+            .myimage {
+              image-resolution: 300dpi;
+            }
+          }
+          
+          </style>
+  
+{% endblock body %}
+

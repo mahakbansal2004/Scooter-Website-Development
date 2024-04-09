@@ -1,0 +1,286 @@
+{% extends 'base.html' %}
+
+{% block title %}
+about
+{% endblock title %}
+
+{% block body %}
+<br id="top"><br>
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Skooty Driving License Application</h2>
+    <section style="max-width: 1600px; margin: 0 auto; box-sizing: border-box;">
+    <form method="post" action="/driving">
+      {% csrf_token %}
+      <div class="form-group">
+        <label for="fullName">Full Name:</label>
+        <input type="text" class="form-control" id="fullName" name="name" placeholder="Enter your full name" required>
+      </div>
+      <div class="form-group">
+        <label for="dob">Date of Birth:</label>
+        <input type="date" class="form-control" id="dob" name="dob" required>
+      </div>
+      <div class="form-group">
+        <label for="address">Address:</label>
+        <textarea class="form-control" id="address" rows="3" name="address" placeholder="Enter your address" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="skootyModel">Skooty Model:</label>
+        <input type="text" class="form-control" id="skootyModel" name="model" placeholder="Enter your skooty model" required>
+      </div>
+      <div class="form-group">
+        <label for="licenseType">License Type:</label>
+        <select class="form-control" id="licenseType" name="type" required>
+          <option value="learner">Learner's License</option>
+          <option value="permanent">Permanent License</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="uploadPhoto">Upload Photo:</label>
+        <input type="file" class="form-control-file" id="uploadPhoto" name="pic" accept="image/*" required>
+      </div>
+      <button type="submit">Submit Application</button>
+    </form>
+  </div>
+
+
+  <div class="container mt-5">
+    <h2 class="text-center mb-4">FAQs</h2>
+    <div>
+      <h5>Q: How do I prepare for the driving test?</h5>
+      <p>A: It's important to study the traffic rules and regulations. You can find educational resources on our website to help you prepare. Additionally, consider taking practice tests to build confidence.</p>
+    </div>
+
+    <div>
+      <h5>Q: How can I track my application status?</h5>
+      <p>A: Once you've submitted your application, you can log in to your account to check the status. We also send email notifications for important updates.</p>
+    </div>
+
+    <div>
+        <h5>Q: What documents do I need to submit?</h5>
+        <p>A: You will need to submit a valid proof of identity, proof of address, and passport-sized photographs. Make sure to check our guidelines for the specific requirements.</p>
+      </div>
+    <!-- Read more button -->
+    <button class="btn btn-primary btn-block mt-4" data-toggle="collapse" data-target="#moreFAQs">Show More FAQs</button>
+
+    <div id="moreFAQs" class="collapse mt-3">
+
+    <div>
+      <h5>Q: What documents do I need to submit?</h5>
+      <p>A: You will need to submit a valid proof of identity, proof of address, and passport-sized photographs. Make sure to check our guidelines for the specific requirements.</p>
+    </div>
+
+    <div>
+      <h5>Q: How long does it take to process the driving license?</h5>
+      <p>A: The processing time varies, but you can check the status of your application on our website. Typically, it takes a few weeks from submission to issuance.</p>
+    </div>
+
+    <div>
+      <h5>Q: Can I reschedule my driving test appointment?</h5>
+      <p>A: Yes, you can reschedule your driving test by logging into your account and selecting a new appointment slot based on availability.</p>
+    </div>
+    
+
+    <div>
+      <h5>Q: Is there an age requirement for obtaining a driving license?</h5>
+      <p>A: Yes, the minimum age requirement for a driving license is typically 18 years. However, there are provisions for obtaining a learner's license at a younger age.</p>
+    </div>
+
+    <div>
+      <h5>Q: What happens if I fail the driving test?</h5>
+      <p>A: If you fail the driving test, you may be allowed to retake it after a specified period. Review the feedback provided and practice areas where improvement is needed.</p>
+    </div>
+
+    <div>
+      <h5>Q: Can I renew my driving license online?</h5>
+      <p>A: Yes, you can usually renew your driving license online. Check our website for renewal eligibility and follow the online renewal process.</p>
+    </div>
+
+    <div>
+      <h5>Q: Are there any discounts for senior citizens?</h5>
+      <p>A: Some regions offer discounts or special considerations for senior citizens. Check with your local authorities or refer to our website for specific details.</p>
+    </div>
+
+    <div>
+      <h5>Q: Can I apply for an international driving permit?</h5>
+      <p>A: Yes, in most cases, you can apply for an international driving permit. Ensure that you meet the eligibility criteria and follow the application process outlined on our website.</p>
+    </div>
+
+    
+      <div>
+        <h5>Q: How often do I need to renew my driving license?</h5>
+        <p>A: The renewal period varies by region. Check the expiration date on your driving license and refer to our website for renewal instructions.</p>
+      </div>
+
+      <div>
+        <h5>Q: Can I change the address on my driving license online?</h5>
+        <p>A: Yes, you can usually update your address online. Ensure that you have the required proof of address and follow the online update process on our website.</p>
+      </div>
+
+      <!-- Add more FAQs as needed -->
+    </div>
+  </div>
+  <a href="#top">Go to top</a>
+</section>
+<br>
+<br>
+
+  <br>
+  <br>
+  <br>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+
+    .container {
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+    }
+
+    h2 {
+      color: #007bff;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    .form-control {
+      border-radius: 5px;
+    }
+
+    button {
+      background-color: #007bff;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+
+    body {
+        background-color: #f8f9fa;
+      }
+  
+      .container {
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+        margin-top: 30px;
+      }
+  
+      h2 {
+        color: #007bff;
+      }
+  
+      label {
+        font-weight: bold;
+      }
+  
+      .form-control {
+        border-radius: 5px;
+      }
+  
+      button {
+        background-color: #007bff;
+        color: #ffffff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+        margin-top: 20px;
+      }
+  
+      button:hover {
+        background-color: #0056b3;
+      }
+  
+      /* Responsive Design */
+      @media (max-width: 576px) {
+        .container {
+          padding: 15px;
+        }
+      }
+
+      body {
+        background-color: #f8f9fa;
+      }
+  
+      .container {
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+        margin-top: 30px;
+      }
+  
+      h2 {
+        color: #007bff;
+      }
+  
+      label {
+        font-weight: bold;
+      }
+  
+      .form-control {
+        border-radius: 5px;
+      }
+  
+      button {
+        background-color: #007bff;
+        color: #ffffff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+        margin-top: 20px;
+      }
+  
+      button:hover {
+        background-color: #0056b3;
+      }
+  
+      /* Responsive Design */
+      @media (max-width: 576px) {
+        .container {
+          padding: 15px;
+        }
+      }
+
+      .faq-answer {
+        display: none;
+      }
+  
+      .read-more-link {
+        cursor: pointer;
+        color: #007bff;
+        text-decoration: underline;
+      }
+  
+      .read-more-link:hover {
+        color: #0056b3;
+      }
+  </style>
+
+  <script>
+    function toggleReadMore(element) {
+      const faqAnswer = element.previousSibling;
+      faqAnswer.style.display = (faqAnswer.style.display === 'none' || faqAnswer.style.display === '') ? 'block' : 'none';
+    }
+  </script>
+
+{% endblock body %}
+

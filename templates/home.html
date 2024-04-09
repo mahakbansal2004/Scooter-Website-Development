@@ -1,0 +1,541 @@
+{% extends 'base.html' %}
+
+{% block title %}
+home
+{% endblock title %}
+
+{% block body %}
+
+<br id='top'><br><br>
+
+<header>
+    <br><br><br><br><br><br><br><br><br>
+    <video autoplay muted loop>
+        <source src="static\vid1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="showroom-name">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h1>Your Scooter Showroom</h1>
+    </div>
+</header>
+
+<section style="max-width: 1600px; margin: 0 auto; box-sizing: border-box;">
+<section id="home">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <!-- Skooty Carousel -->
+                <div id="skootyCarousel" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="static\skooty3.avif" alt="Example Image" width="600" height="400">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="static\skooty4.png" alt="Example Image" width="600" height="400">
+                        </div>
+                        <!-- Add more carousel items as needed -->
+                    </div>
+                    <a class="carousel-control-prev" href="#skootyCarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#skootyCarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h2>Your Journey, Our Scooters</h2>
+                <p>Explore the perfect blend of style and efficiency with Skooty's latest collection of scooters.</p>
+                <a href="#models" class="btn btn-orange">Discover Models</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+  <!-- Features Section -->
+  <div id="features" class="features-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="feature-box">
+            <i class="fas fa-globe feature-icon"></i>
+            <h3>Global Reach</h3>
+            <p>Skooty is available in cities around the world, providing convenient transportation solutions.</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="feature-box">
+            <i class="fas fa-clock feature-icon"></i>
+            <h3>24/7 Availability</h3>
+            <p>Whether it's day or night, Skooty is ready to accompany you on your journey at any time.</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="feature-box">
+            <i class="fas fa-user-shield feature-icon"></i>
+            <h3>Safety First</h3>
+            <p>Your safety is our priority. Our scooters are regularly maintained, and safety features are emphasized.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <section class="features" bg-dark>
+    <h2>Exciting Features</h2>
+
+    <p>Electrify every commute. Turn each ride into a future-friendly experience.</p>
+
+    <div class="upcoming-scooters" bg-dark>
+        <!-- ... Previous scooter cards ... -->
+    </div>
+
+    <div class="google-map">
+        <!-- Replace YOUR_GOOGLE_MAPS_EMBED_CODE with the actual embed code from Google Maps -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.113718392969!2dYOUR_LONGITUDE_HERE!3dYOUR_LATITUDE_HERE!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3AYOUR_LOCATION_NAME!2sYOUR_LOCATION_NAME!5e0!3m2!1sen!2sus!4v1605005373852!5m2!1sen!2sus" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    
+</section>
+
+
+{% comment %} <section id="home">
+    <div class="hero-section">
+        <img src="skooty_image.jpg" alt="Skooty Image">
+        <h2>Your Journey, Our Scooters</h2>
+        <p>Explore the perfect blend of style and efficiency with Skooty's latest collection of scooters.</p>
+        <a href="#models" class="cta-button">Discover Models</a>
+    </div>
+</section>
+
+
+
+<section id="models">
+    <div class="container">
+        <h2 class="text-center">Discover Our Upcoming Models</h2>
+        <!-- Models Carousel -->
+        <div id="modelsCarousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="model1.jpg" class="d-block w-100" alt="Model 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="model2.jpg" class="d-block w-100" alt="Model 2">
+                </div>
+                <!-- Add more carousel items as needed -->
+            </div>
+            <a class="carousel-control-prev" href="#modelsCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#modelsCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+</section> {% endcomment %}
+
+
+<div class="container" style="max-width: 1700px; margin: 0 auto; box-sizing: border-box;">
+    <div class="row">
+        <div class="col-md-6">
+            <section id="home">
+                <div class="hero-section">
+                    <img src="static\skooty2.avif" alt="Example Image" width="500" height="200">
+                    <br>
+                   <br>
+                    <h2>Your Journey, Our Scooters</h2>
+                    <p>Explore the perfect blend of style and efficiency with Skooty's latest collection of scooters.</p>
+                    <a href="#models" class="cta-button" onclick="displayCategoryMessage()">Discover Models</a>
+                </div>
+            </section>
+        </div>
+
+        <!-- Modal -->
+<div class="modal fade" id="categoryModal" tabindex="-1" role="dialog" aria-labelledby="categoryModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="categoryModalLabel">Please Select a Category</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Please select a category from the above navigation bar.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+        <div class="col-md-6">
+            <section id="models">
+                <h2 class="text-center mb-4">Discover Our Upcoming Models</h2>
+                <br>
+                <!-- Models Carousel -->
+                <div id="modelsCarousel" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="static\upcoming1.png" alt="Example Image" width="600" height="400">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="static\upcoming2.png" alt="Example Image" width="600" height="400">
+                        </div>
+                        <!-- Add more carousel items as needed -->
+                    </div>
+                    <a class="carousel-control-prev" href="#modelsCarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#modelsCarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+
+
+{% comment %} <section id="outlets">
+    <h2>Our Presence Nationwide</h2>
+    <p>With 20 states and over 200 outlets, Skooty is accessible to you wherever you are.</p>
+    <div class="animated-info">
+        <!-- Add animated content here -->
+    </div>
+</section> {% endcomment %}
+
+
+
+
+{% comment %} <section id="shop">
+    <h2>Find Your Perfect Ride</h2>
+    <p>Explore our range of skooties or sell your existing vehicle. Your dream ride is just a click away.</p>
+    <a href="#shop" class="cta-button">Explore Now</a>
+</section> {% endcomment %}
+
+
+
+
+
+
+<section>
+    <h2>Our Locations</h2>
+    <div class="states-outlets">
+        <div class="state">
+            <h3>State 1</h3>
+            <p>Details about State 1</p>
+        </div>
+        <div class="state">
+            <h3>State 2</h3>
+            <p>Details about State 2</p>
+        </div>
+        <!-- Add more state divs as needed -->
+
+        <div class="outlet">
+            <h3>Outlet 1</h3>
+            <p>Details about Outlet 1</p>
+        </div>
+        <div class="outlet">
+            <h3>Outlet 2</h3>
+            <p>Details about Outlet 2</p>
+        </div>
+        <!-- Add more outlet divs as needed -->
+    </div>
+</section>
+
+
+</section>
+<a href="#top">Go to top</a>
+  <!-- Contact Section -->
+  <div id="contact" class="footer">
+    <div class="container text-center">
+      <h2>Contact Us</h2>
+      <p>Have questions or need assistance? Contact our support team.</p>
+      <a class="btn btn-light btn-lg" href="mailto:support@skooty.com">Email Us</a><br>
+    </div>
+  </div>
+  
+
+  <br><br>
+  <script>
+    // Function to display a message when "Discover Models" is clicked
+    function displayCategoryMessage() {
+      alert("Please select a category from the above navigation bar.");
+    }
+  </script>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+  
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+
+
+
+
+
+  <style>
+
+   
+    .animated-info .card {
+        animation: fadeInUp 0.5s ease-in-out; /* Adjust animation properties as needed */
+    }
+
+    @media (max-width: 768px) {
+        .animated-info .card {
+            margin-bottom: 30px;
+        }
+    }
+   
+
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    
+    header {
+        background-color: #1a1a1a;
+        color: white;
+        padding: 20px 0;
+    }
+    
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    nav li {
+        display: inline;
+        margin-right: 20px;
+    }
+    
+    section {
+        margin: 40px 0;
+        text-align: center;
+    }
+    
+    .hero-section img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .upcoming-vehicles {
+        /* Style for upcoming vehicles section */
+    }
+    
+    .animated-info {
+        /* Style for animated information section */
+    }
+    
+    .cta-button {
+        display: inline-block;
+        padding: 10px 20px;
+        margin-top: 20px;
+        text-decoration: none;
+        color: white;
+        background-color: #ff6600;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+    
+    .cta-button:hover {
+        background-color: #cc5200;
+    }
+    
+    footer {
+        background-color: #1a1a1a;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+    
+    .features {
+        margin-top: 2em;
+        text-align: center;
+    }
+
+    .upcoming-scooters {
+        display: flex;
+        overflow: hidden;
+        margin-top: 1em;
+    }
+
+    .scooter-card {
+        flex: 0 0 33.3333%;
+        box-sizing: border-box;
+        padding: 1em;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .scooter-card:hover {
+        transform: scale(1.1);
+    }
+
+    .google-map {
+        flex: 0 0 50%;
+        box-sizing: border-box;
+        margin-top: 2em;
+        height: 400px; /* Adjust the height as needed */
+        border: 2px solid #ddd; /* Add a border for better visibility */
+        border-radius: 8px; /* Optional: Add border radius for a rounded appearance */
+        overflow: hidden;
+    }
+
+    .google-map iframe {
+        width: 100%;
+        height: 100%;
+        border: 0; /* Remove iframe border */
+    }
+
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            position: relative;
+            height: 70vh;
+            overflow: hidden;
+        }
+
+        header video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .showroom-name {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            font-size: 2em;
+            text-align: center;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        section {
+            padding: 2em;
+        }
+
+        .states-outlets {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            text-align: center;
+        }
+
+        .state, .outlet {
+            flex: 1;
+            padding: 1em;
+            margin: 1em;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .state:hover, .outlet:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
+    
+    body {
+      background-color: #f8f9fa;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .navbar {
+      background-color: #007bff;
+      padding: 1rem;
+    }
+
+    .navbar-brand,
+    .navbar-nav .nav-link {
+      color: #ffffff;
+    }
+
+    .jumbotron {
+      background: url('skooty-image.jpg') center/cover no-repeat;
+      color: #ffffff;
+      text-align: center;
+      padding: 100px 0;
+      margin-bottom: 0;
+    }
+
+    .features-section {
+      padding: 80px 0;
+      background-color: #ffffff;
+    }
+
+    .feature-box {
+      text-align: center;
+    }
+
+    .feature-icon {
+      font-size: 4rem;
+      margin-bottom: 20px;
+    }
+
+    .footer {
+      background-color: #007bff;
+      color: #ffffff;
+      padding: 30px 0;
+    }
+
+   
+  </style>
+{% endblock body %}
