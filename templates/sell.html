@@ -1,0 +1,120 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Sell Your Second-Hand Scooty
+{% endblock title %}
+
+{% block body %}
+<div class="container mt-5 pt-5">
+    <h2 class="text-center mb-4">Sell Your Second-Hand Scooty</h2>
+    <p class="text-center text-muted">Fill in the details of your scooty to list it for sale.</p>
+    
+    <form id="sell-form" class="shadow p-4 bg-light rounded">
+        <div class="form-group mb-4">
+            <label for="seller-name" class="form-label font-weight-bold">Your Name:</label>
+            <input type="text" id="seller-name" class="form-control" placeholder="Enter your full name" required />
+        </div>
+        <div class="form-group mb-4">
+            <label for="email" class="form-label font-weight-bold">Email:</label>
+            <input type="email" id="email" class="form-control" placeholder="Enter your email" required />
+        </div>
+        <div class="form-group mb-4">
+            <label for="phone-number" class="form-label font-weight-bold">Phone Number:</label>
+            <input type="tel" id="phone-number" class="form-control" placeholder="Enter your phone number" required />
+        </div>
+        <div class="form-group mb-4">
+            <label for="brand" class="form-label font-weight-bold">Scooty Brand:</label>
+            <select id="brand" class="form-control" required>
+                <option value="" disabled selected>Select brand</option>
+                <option value="Honda">Honda</option>
+                <option value="TVS">TVS</option>
+                <option value="Hero">Hero</option>
+                <option value="Suzuki">Suzuki</option>
+            </select>
+        </div>
+        <div class="form-group mb-4">
+            <label for="model" class="form-label font-weight-bold">Scooty Model:</label>
+            <select id="model" class="form-control" required>
+                <option value="" disabled selected>Select model</option>
+                <option value="Activa">Activa</option>
+                <option value="Jupiter">Jupiter</option>
+                <option value="Maestro">Maestro</option>
+                <option value="Access">Access</option>
+            </select>
+        </div>
+        <div class="form-group mb-4">
+            <label for="price" class="form-label font-weight-bold">Expected Selling Price (₹):</label>
+            <input type="number" id="price" class="form-control" placeholder="Enter your expected price" required />
+        </div>
+        <div class="form-group mb-4">
+            <label for="description" class="form-label font-weight-bold">Description:</label>
+            <textarea id="description" class="form-control" rows="4" placeholder="Describe your scooty (condition, mileage, etc.)" required></textarea>
+        </div>
+        <div class="form-group mb-4">
+            <label for="scooty-image" class="form-label font-weight-bold">Upload Scooty Image:</label>
+            <input type="file" id="scooty-image" class="form-control" accept="image/*" required />
+        </div>
+        <button type="submit" class="btn btn-dark btn-block">Submit Listing</button>
+    </form>
+    <br><br><br>
+</div>
+
+<!-- Success Modal -->
+<div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="successModalLabel">Listing Created</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Your listing has been successfully added! We will notify you when someone shows interest in your scooty.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById("sell-form").addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        // Get form data
+        const sellerName = document.getElementById("seller-name").value;
+        const email = document.getElementById("email").value;
+        const phoneNumber = document.getElementById("phone-number").value;
+        const brand = document.getElementById("brand").value;
+        const model = document.getElementById("model").value;
+        const price = document.getElementById("price").value;
+        const description = document.getElementById("description").value;
+        const imageFile = document.getElementById("scooty-image").files[0];
+
+        // Convert image to Base64
+        const imageBase64 = await toBase64(imageFile);
+
+        // Save data to localStorage
+        const scootyListings = JSON.parse(localStorage.getItem("scootyListings")) || [];
+        scootyListings.push({ sellerName, email, phoneNumber, brand, model, price, description, imageBase64 });
+        localStorage.setItem("scootyListings", JSON.stringify(scootyListings));
+
+        // Show success modal
+        const successModal = new bootstrap.Modal(document.getElementById("successModal"));
+        successModal.show();
+    });
+
+    function toBase64(file) {
+        return new Promise((resolve, reject) => {
+            const reader = new FileReader();
+            reader.onload = () => resolve(reader.result);
+            reader.onerror = (error) => reject(error);
+            reader.readAsDataURL(file);
+        });
+    }
+</script>
+
+<style>
+    .shadow {
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+</style>
+
+{% endblock body %}

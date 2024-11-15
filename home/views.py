@@ -36,6 +36,23 @@ def services(request):
     return render(request,'services.html')
     #return HttpResponse("this is a services page")
 
+def buy(request):
+    return render(request,'buy.html')
+    #return HttpResponse("this is a services page")
+
+def sell(request):
+    return render(request,'sell.html')
+    #return HttpResponse("this is a services page")
+
+def reviews(request):
+    return render(request,'reviews.html')
+
+
+
+
+def booking(request):
+    return render(request,'booking.html')
+
 def contact(request):
      if request.method=="POST":
          name=request.POST.get('name')

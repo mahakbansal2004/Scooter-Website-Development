@@ -30,6 +30,14 @@ urlpatterns = [
     path("home",views.home,name='home'),
     path("about",views.about,name='about'),
     path("services",views.services,name='services'),
+    path("booking",views.booking,name='booking'),
+        path("buy",views.buy,name='buy'),
+
+    path("sell",views.sell,name='sell'),
+        path("reviews",views.reviews,name='reviews'),
+
+
+
     path("contact",views.contact,name='contact'),
     path("electric",views.electric,name='services'),
     path("petrol",views.petrol,name='petrol'),

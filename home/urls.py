@@ -9,6 +9,14 @@ urlpatterns = [
     path('home',include('home.urls')),
     path('about',include('about.urls')),
     path('services',include('services.urls')),
+    path('booking',include('booking.urls')),
+        path('buy',include('buy.urls')),
+
+    path('sell',include('sell.urls')),
+        path('reviews',include('reviews.urls')),
+
+
+
     path('contact',include('contact.urls')),
     path('driving',include('driving.urls')),
     path('electric',include('electric.urls')),

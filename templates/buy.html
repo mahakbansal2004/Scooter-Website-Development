@@ -1,0 +1,161 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Buy Second-Hand Scooty
+{% endblock title %}
+
+{% block body %}
+<div class="container mt-5 pt-5">
+    <h2 class="text-center mb-4">Available Second-Hand Scooties</h2>
+
+    <!-- Filter Section -->
+    <div class="row mb-4">
+        <div class="col-md-3">
+            <select id="filter-brand" class="form-control">
+                <option value="" selected>Filter by Brand</option>
+                <option value="Honda">Honda</option>
+                <option value="TVS">TVS</option>
+                <option value="Hero">Hero</option>
+                <option value="Suzuki">Suzuki</option>
+            </select>
+        </div>
+        <div class="col-md-3">
+            <input type="number" id="filter-min-price" class="form-control" placeholder="Min Price (₹)">
+        </div>
+        <div class="col-md-3">
+            <input type="number" id="filter-max-price" class="form-control" placeholder="Max Price (₹)">
+        </div>
+        <div class="col-md-3">
+            <button id="apply-filters" class="btn btn-dark btn-block">Apply Filters</button>
+        </div>
+    </div>
+
+    <!-- Listings Section -->
+    <div id="scooty-listings" class="row">
+        <!-- Dynamic cards will be injected here -->
+    </div>
+</div>
+
+<!-- Contact Seller Modal -->
+<div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="contactModalLabel">Contact Seller</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="contact-form">
+                    <div class="form-group mb-3">
+                        <label for="buyer-name" class="form-label font-weight-bold">Your Name:</label>
+                        <input type="text" id="buyer-name" class="form-control" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="buyer-email" class="form-label font-weight-bold">Your Email:</label>
+                        <input type="email" id="buyer-email" class="form-control" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="buyer-phone" class="form-label font-weight-bold">Your Phone Number:</label>
+                        <input type="tel" id="buyer-phone" class="form-control" placeholder="Enter your phone number" required>
+                    </div>
+                    <button type="submit" class="btn btn-dark btn-block">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    let selectedSeller = null;
+
+    // Load listings and display dynamically
+    window.addEventListener("DOMContentLoaded", () => {
+        loadListings();
+
+        document.getElementById("apply-filters").addEventListener("click", () => {
+            loadListings();
+        });
+    });
+
+    function loadListings() {
+        const scootyListings = JSON.parse(localStorage.getItem("scootyListings")) || [];
+        const listingsContainer = document.getElementById("scooty-listings");
+        const filterBrand = document.getElementById("filter-brand").value;
+        const filterMinPrice = parseInt(document.getElementById("filter-min-price").value) || 0;
+        const filterMaxPrice = parseInt(document.getElementById("filter-max-price").value) || Infinity;
+
+        listingsContainer.innerHTML = "";
+
+        const filteredListings = scootyListings.filter(listing => {
+            const matchesBrand = !filterBrand || listing.brand === filterBrand;
+            const matchesPrice = listing.price >= filterMinPrice && listing.price <= filterMaxPrice;
+            return matchesBrand && matchesPrice;
+        });
+
+        if (filteredListings.length === 0) {
+            listingsContainer.innerHTML = `<p class="text-center text-muted">No listings available for the selected filters.</p>`;
+            return;
+        }
+
+        filteredListings.forEach((listing, index) => {
+            const card = document.createElement("div");
+            card.classList.add("col-md-4", "mb-4");
+            card.innerHTML = `
+                <div class="card shadow-sm">
+                    <img src="${listing.imageBase64}" class="card-img-top" alt="${listing.brand} ${listing.model}">
+                    <div class="card-body">
+                        <h5 class="card-title">${listing.brand} ${listing.model}</h5>
+                        <p class="card-text">Price: ₹${listing.price}</p>
+                        <p class="card-text">${listing.description}</p>
+                        <button class="btn btn-dark btn-block mb-2" onclick="showContactModal(${index})">Contact Seller</button>
+                        <button class="btn btn-danger btn-block" onclick="deleteListing(${index})">Delete</button>
+                    </div>
+                </div>
+            `;
+            listingsContainer.appendChild(card);
+        });
+    }
+
+    function deleteListing(index) {
+        // Get existing listings
+        let scootyListings = JSON.parse(localStorage.getItem("scootyListings")) || [];
+
+        // Remove the listing at the given index
+        scootyListings.splice(index, 1);
+
+        // Save the updated listings back to localStorage
+        localStorage.setItem("scootyListings", JSON.stringify(scootyListings));
+
+        // Reload the listings
+        loadListings();
+    }
+
+    function showContactModal(index) {
+        selectedSeller = JSON.parse(localStorage.getItem("scootyListings"))[index];
+        const contactModal = new bootstrap.Modal(document.getElementById("contactModal"));
+        contactModal.show();
+    }
+
+    document.getElementById("contact-form").addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        const buyerName = document.getElementById("buyer-name").value;
+        const buyerEmail = document.getElementById("buyer-email").value;
+        const buyerPhone = document.getElementById("buyer-phone").value;
+
+        // Show seller details
+        alert(`Thank you, ${buyerName}! Seller Details:\nName: ${selectedSeller.sellerName}\nPhone: ${selectedSeller.phoneNumber}\nEmail: ${selectedSeller.email}`);
+
+        // Send Email (you need backend integration for this part)
+        console.log(`Send email to ${selectedSeller.email} from ${buyerEmail} about interest in ${selectedSeller.brand} ${selectedSeller.model}.`);
+    });
+</script>
+
+
+<style>
+    .shadow-sm {
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+</style>
+
+{% endblock body %}
